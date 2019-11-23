@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/date_navBottom"
+        android:icon="@drawable/ic_access_alarm"
+        android:title="Báo thức"/>
+    <item
+        android:id="@+id/time_navBottom"
+        android:icon="@drawable/ic_diary"
+        android:title="Nhật ký"/>
+    <item
+        android:id="@+id/color_navBottom"
+        android:icon="@drawable/ic_account_balance"
+        android:title="Chọn gói câu hỏi"/>
+    <item
+        android:id="@+id/delete_navBottom"
+        android:icon="@drawable/ic_settings"
+        android:title="Cài đặt"/>
+</menu>

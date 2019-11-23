@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginTop_welcome_loginScreen">250dp</dimen>
+    <dimen name="marginLeft_welcome_loginScreen">80dp</dimen>
+    <dimen name="marginTop_button1_loginScreen">600dp</dimen>
+    <dimen name="marginTop_button2_loginScreen">660dp</dimen>
+</resources>

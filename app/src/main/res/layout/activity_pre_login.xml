@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreLogin"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xin chào!"
+        android:textColor="@android:color/white"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/marginTop_welcome_loginScreen"
+        android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rất vui được gặp lại bạn!"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập bằng tài khoản"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/marginTop_button1_loginScreen"
+        android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"
+        android:background="@drawable/button_login"/>
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập face id"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/marginTop_button2_loginScreen"
+        android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"
+        android:background="@drawable/button_login"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hướng dẫn"
+        android:textSize="18sp"
+        android:textColor="#320113"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="15dp"/>
+</FrameLayout>

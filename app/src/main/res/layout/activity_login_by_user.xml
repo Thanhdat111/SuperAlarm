@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginByUser"
+    android:background="@drawable/background">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="@drawable/backgroud_dangnhap"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/lb_dangnhap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"/>
+            <EditText
+                android:id="@+id/edt_tendangnhap"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field"
+                android:layout_centerHorizontal="true"
+                android:hint="Tên đăng nhập"
+                android:layout_below="@+id/lb_dangnhap"
+                android:layout_marginTop="50dp"/>
+            <EditText
+                android:id="@+id/edt_matkhau"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:background="@drawable/input_field"
+                android:layout_gravity="center"
+                android:hint="Mật khẩu"
+                android:layout_below="@id/edt_tendangnhap"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quên mật khẩu"
+                android:textSize="16sp"
+                android:layout_below="@id/edt_matkhau"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="15dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tạo tài khoản"
+        android:textSize="18sp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="20dp"/>
+
+</FrameLayout>

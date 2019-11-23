@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lb_timeAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="60sp"
+        android:layout_margin="50dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đặt giờ"
+        android:layout_toRightOf="@id/lb_timeAlarm"
+        android:layout_marginTop="70dp"/>
+    <EditText
+        android:id="@+id/edt_nameAlarm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Tên báo thức"
+        android:textSize="26sp"
+        android:layout_below="@id/lb_timeAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_allDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cả tuần"
+        android:textSize="26sp"
+        android:layout_below="@id/edt_nameAlarm"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_monDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ hai"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_allDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_tueDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ ba"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_monDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_wedDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ tư"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_tueDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_thuDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ năm"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_wedDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_friDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ sáu"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_thuDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_stuDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thứ bảy"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_friDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_sunDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chử nhật"
+        android:textSize="26sp"
+        android:layout_below="@id/checkBox_stuDay"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="10dp"/>
+</RelativeLayout>

@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".LoginByFaceId"></activity>
-        <activity android:name=".PreLogin" />
-        <activity android:name=".LoginByUser" />
+        <activity android:name=".UI.Login.LoginByFaceId"></activity>
+        <activity android:name=".UI.Login.PreLogin" />
+        <activity android:name=".UI.Login.LoginByUser" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

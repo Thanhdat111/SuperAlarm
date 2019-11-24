@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginByFaceId">
+    tools:context=".UI.Login.LoginByFaceId">
 
     <ImageView
         android:id="@+id/img_photo_checkid"

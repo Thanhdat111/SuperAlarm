@@ -1,8 +1,10 @@
-package com.example.superalarm;
+package com.example.superalarm.UI.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.superalarm.R;
 
 public class LoginByFaceId extends AppCompatActivity {
 

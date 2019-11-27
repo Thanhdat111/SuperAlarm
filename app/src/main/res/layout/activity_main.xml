@@ -19,9 +19,10 @@
             app:navigationIcon="@drawable/ic_menu" />
 
         <fragment
+            android:id="@+id/fragment_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:name="com.example.superalarm.UI.Fragment.AlarmFragment"
             android:layout_below="@id/toolbar_mainActivity"/>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"

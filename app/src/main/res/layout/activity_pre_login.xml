@@ -26,6 +26,7 @@
         android:layout_marginTop="220dp"
         android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"/>
     <Button
+        android:id="@+id/btn_login_by_user"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Đăng nhập bằng tài khoản"
@@ -34,6 +35,7 @@
         android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"
         android:background="@drawable/button_login"/>
     <Button
+        android:id="@+id/btn_login_by_faceid"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:text="Đăng nhập face id"
@@ -42,11 +44,15 @@
         android:layout_marginLeft="@dimen/marginLeft_welcome_loginScreen"
         android:background="@drawable/button_login"/>
     <TextView
+        android:id="@+id/lb_guide_preLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hướng dẫn"
         android:textSize="18sp"
-        android:textColor="#320113"
+        android:textColor="@color/color_text"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginBottom="15dp"
+        android:onClick="onClick"
+        tools:ignore="OnClick"
+        android:clickable="true"/>
 </FrameLayout>

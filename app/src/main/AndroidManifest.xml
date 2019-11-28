@@ -20,5 +20,8 @@
             </intent-filter>
         </activity>
     </application>
+    <meta-data
+        android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+        android:value="face" />
 
 </manifest>

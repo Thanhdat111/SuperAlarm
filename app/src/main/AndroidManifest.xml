@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.superalarm">
 
+    <meta-data
+        android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+        android:value="face" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".UI.Login.LoginByFaceIdActivity"></activity>
+        <activity android:name=".UI.Login.ResetPasswordActivity"></activity>
+        <activity android:name=".UI.Login.RegisterActivity" />
+        <activity android:name=".UI.Login.LoginByFaceIdActivity" />
         <activity android:name=".UI.Login.PreLoginActivity" />
         <activity android:name=".UI.Login.LoginByUserActivity" />
         <activity android:name=".MainActivity">
@@ -20,8 +26,5 @@
             </intent-filter>
         </activity>
     </application>
-    <meta-data
-        android:name="com.google.firebase.ml.vision.DEPENDENCIES"
-        android:value="face" />
 
 </manifest>

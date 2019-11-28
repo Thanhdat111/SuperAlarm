@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Login.RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Super Alarm"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_text"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"/>
+    <EditText
+        android:id="@+id/edt_email_sinup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/edt_password_signup"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/input_field"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/edt_password_signup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/input_field"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/black"/>
+    <EditText
+        android:id="@+id/edt_confirmPassword_signup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/edt_password_signup"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:background="@drawable/input_field"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/black"/>
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="Sign up"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:background="@drawable/button_login"
+        android:layout_below="@+id/edt_confirmPassword_signup"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lb_guide_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hướng dẫn?"
+        android:textColor="@color/color_text"
+        android:textSize="26dp"
+        android:layout_below="@id/edt_confirmPassword_signup"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:onClick="onClick"
+        tools:ignore="OnClick"
+        android:clickable="true"/>
+
+</RelativeLayout>

@@ -10,25 +10,18 @@
         android:layout_height="wrap_content"
         android:text="00:00"
         android:textSize="60sp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"/>
     <Button
+        android:id="@+id/btn_set_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đặt giờ"
         android:layout_toRightOf="@id/lb_timeAlarm"
-        android:layout_marginTop="60dp"/>
-    <EditText
-        android:id="@+id/edt_nameAlarm"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:hint="Tên báo thức"
-        android:textSize="26sp"
-        android:layout_below="@id/lb_timeAlarm"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"/>
 
     <CheckBox
         android:id="@+id/checkBox_allDay"
@@ -36,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Cả tuần"
         android:textSize="26sp"
-        android:layout_below="@id/edt_nameAlarm"
+        android:layout_below="@id/lb_timeAlarm"
         android:layout_marginLeft="60dp"
         android:layout_marginBottom="10dp"/>
     <CheckBox
@@ -102,4 +95,19 @@
         android:layout_below="@id/checkBox_stuDay"
         android:layout_marginLeft="60dp"
         android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_set_alarm_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hẹn giờ"
+        android:layout_below="@id/checkBox_sunDay"
+        android:layout_margin="20dp"/>
+    <Button
+        android:id="@+id/btn_stop_alarm_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dừng lại"
+        android:layout_below="@id/checkBox_sunDay"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
 </RelativeLayout>

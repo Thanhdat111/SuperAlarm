@@ -35,19 +35,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dl = (DrawerLayout)findViewById(R.id.drawerlayout);
 
+        //toolbar
         toolbar = (Toolbar)findViewById(R.id.toolbar_mainActivity);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Báo thức");
         toolbar.setTitleTextColor(Color.WHITE);
-
         ActionBar actionBar = getSupportActionBar();
-
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
         //nav drawer
+        dl = (DrawerLayout)findViewById(R.id.drawerlayout);
         nav_view = (NavigationView)findViewById(R.id.nav_view);
         nav_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override

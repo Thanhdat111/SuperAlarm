@@ -16,6 +16,7 @@ public class QuestionFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_choosequestion, container, false);
+        View view = inflater.inflate(R.layout.fragment_choosequestion, container, false);
+        return view;
     }
 }

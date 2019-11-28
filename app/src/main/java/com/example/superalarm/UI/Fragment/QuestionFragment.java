@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.superalarm.R;
 
-public class ChooseQuestionFragment extends Fragment {
+public class QuestionFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {

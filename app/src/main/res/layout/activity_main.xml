@@ -18,13 +18,13 @@
             android:background="#FF013220"
             app:navigationIcon="@drawable/ic_menu" />
 
-        <fragment
+        <FrameLayout
             android:id="@+id/fragment_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.superalarm.UI.Fragment.AlarmFragment"
             android:layout_below="@id/toolbar_mainActivity"/>
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -35,7 +35,7 @@
             app:menu="@menu/menu_navigationbottom"/>
     </RelativeLayout>
 
-    <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="180dp"
         android:layout_height="match_parent"

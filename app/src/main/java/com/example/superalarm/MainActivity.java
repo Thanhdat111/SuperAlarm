@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = getSupportActionBar();
-//       toolbar.setTitle("Alarm");
-
+        //default fragment
+        Fragment fragment = new AlarmFragment();
+        loadFragment(fragment);
 
         BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -40,25 +40,21 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.alarm_navBottom:
-   //                 toolbar.setTitle("Alarm");
                     Log.d("fragemt","alarm");
                     fragment = new AlarmFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.diary_navBottom:
-//                    toolbar.setTitle("Diary");
                     Log.d("fragemt","diary");
                     fragment = new DiaryFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.question_navBottom:
- //                   toolbar.setTitle("Question");
                     Log.d("fragemt","question");
                     fragment = new QuestionFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.setting_navBottom:
-//                    toolbar.setTitle("Setting");
                     Log.d("fragemt","setting");
                     fragment = new SettingFragment();
                     loadFragment(fragment);

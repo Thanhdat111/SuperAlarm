@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.superalarm.R;
 
-public class LoginByFaceId extends AppCompatActivity {
+public class LoginByUserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_by_face_id);
+        setContentView(R.layout.activity_login_by_user);
     }
 }

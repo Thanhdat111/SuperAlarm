@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.example.superalarm.R;
 
-public class PreLogin extends AppCompatActivity {
+public class PreLoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

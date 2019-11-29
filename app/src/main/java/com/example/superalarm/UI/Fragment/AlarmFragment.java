@@ -40,7 +40,7 @@ public class AlarmFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_alarm, container, false);
 
-        btn_setHour = (Button) view.findViewById(R.id.btn_set_hour);
+        btn_setHour = (Button) view.findViewById(R.id.btn_set_hours);
         btn_setAlarmClock = (Button) view.findViewById(R.id.btn_set_alarm_clock);
         btn_stopAlarmClock = (Button) view.findViewById(R.id.btn_stop_alarm_clock);
         lb_time_alarmClock = (TextView) view.findViewById(R.id.lb_timeAlarm);

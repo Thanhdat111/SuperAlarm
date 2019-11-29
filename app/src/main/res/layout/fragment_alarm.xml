@@ -15,7 +15,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginBottom="20dp"/>
     <Button
-        android:id="@+id/btn_set_hour"
+        android:id="@+id/btn_set_hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đặt giờ"

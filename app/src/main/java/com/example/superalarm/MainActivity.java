@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.superalarm.Database.questiondatabase.DatabaseQuestion;
 import com.example.superalarm.UI.Fragment.AlarmFragment;
 import com.example.superalarm.UI.Fragment.QuestionFragment;
 import com.example.superalarm.UI.Fragment.DiaryFragment;
@@ -30,10 +31,12 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout dl;
     private NavigationView nav_view;
     private Toolbar toolbar;
+    private DatabaseQuestion db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = new DatabaseQuestion(this);
 
 
         //toolbar

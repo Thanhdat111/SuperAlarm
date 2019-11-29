@@ -74,6 +74,8 @@ public class AlarmFragment extends Fragment {
 
                Log.d("test", String.valueOf(calendar.getTimeInMillis()));
 
+               intent_alarm.putExtra("extra","on");
+
                pendingIntent = PendingIntent.getBroadcast(getActivity(),0,intent_alarm,PendingIntent.FLAG_UPDATE_CURRENT);
                alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
             }
@@ -85,6 +87,8 @@ public class AlarmFragment extends Fragment {
                 // Stop alarm clock
                 pendingIntent.cancel();
                 Toast.makeText(getActivity(),"Đã hủy hẹn giờ",Toast.LENGTH_SHORT).show();
+                intent_alarm.putExtra("extra","off");
+                getActivity().sendBroadcast(intent_alarm);
             }
         });
 

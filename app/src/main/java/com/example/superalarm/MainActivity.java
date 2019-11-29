@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
+
         //nav drawer
         dl = (DrawerLayout)findViewById(R.id.drawerlayout);
         nav_view = (NavigationView)findViewById(R.id.nav_view);

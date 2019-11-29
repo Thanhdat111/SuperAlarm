@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +71,8 @@ public class AlarmFragment extends Fragment {
             @Override
             public void onClick(View view) {
                lb_time_alarmClock.setText(hours+" : "+minutes+" ");
+
+               Log.d("test", String.valueOf(calendar.getTimeInMillis()));
 
                pendingIntent = PendingIntent.getBroadcast(getActivity(),0,intent_alarm,PendingIntent.FLAG_UPDATE_CURRENT);
                alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);

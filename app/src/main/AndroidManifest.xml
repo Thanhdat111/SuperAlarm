@@ -26,6 +26,8 @@
             </intent-filter>
         </activity>
         <receiver android:name=".Alarm.AlarmReceiver"/>
+        <service android:name=".Alarm.Sound"
+            android:enabled="true"/>
     </application>
 
 </manifest>

@@ -5,13 +5,13 @@ public class Question {
     String question;
     String answer;
 
-    Question(int id, String question, String answer) {
+    public Question(int id, String question, String answer) {
         this.answer = answer;
         this.id = id;
         this.question = question;
     }
 
-    Question(String question,String answer){
+    public Question(String question,String answer){
         this.question = question;
         this.answer  = answer;
     }

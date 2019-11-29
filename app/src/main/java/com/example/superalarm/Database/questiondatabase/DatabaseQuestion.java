@@ -5,21 +5,23 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
 public class DatabaseQuestion extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION =1;
-
     private static final String DATABASE_NAME = "Question";
     private static final String TABLE_NAME = "question_manager";
     private static final String ID = "id";
     private static final String QUESTION = "question";
     private static final String ANSWER = "answer";
+    private Context context;
 
     public DatabaseQuestion(Context context) {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
+        this.context = context;
     }
 
 
@@ -33,11 +35,12 @@ public class DatabaseQuestion extends SQLiteOpenHelper{
     }
     @Override
     public void onCreate(SQLiteDatabase db){
-        String sql = "CREATE TABLE " + TABLE_NAME + "("
+        String sql = "CREATE TABLE " + TABLE_NAME + "( "
                 +ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 +QUESTION+" TEXT,"
-                +ANSWER+" TEXT" + ")";
+                +ANSWER+" TEXT " + ")";
         db.execSQL(sql);
+        Log.d("createTable" ,"done");
 
 
     }
@@ -66,7 +69,7 @@ public class DatabaseQuestion extends SQLiteOpenHelper{
 
 
     }
-    public Question getContat(int id){
+    public Question getQuestion(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor =db.query(TABLE_NAME ,new String[]{ID,QUESTION,ANSWER},ID+"=?",new String[]{String.valueOf(id)},null,null,null);
         if(cursor!=null) {

@@ -70,7 +70,7 @@ public class AlarmFragment extends Fragment {
         btn_setAlarmClock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               lb_time_alarmClock.setText(hours+" : "+minutes+" ");
+               lb_time_alarmClock.setText(hours+":"+minutes+" ");
 
                Log.d("test", String.valueOf(calendar.getTimeInMillis()));
 

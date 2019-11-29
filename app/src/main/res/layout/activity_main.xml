@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:background="#FF013220"
             app:navigationIcon="@drawable/ic_menu" />
-
         <FrameLayout
             android:id="@+id/fragment_main"
             android:layout_width="match_parent"

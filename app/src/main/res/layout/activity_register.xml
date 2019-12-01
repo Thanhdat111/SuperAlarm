@@ -81,5 +81,14 @@
         android:onClick="onClick"
         tools:ignore="OnClick"
         android:clickable="true"/>
-
+    <ProgressBar
+        android:id="@+id/loadingProgressBar_signUp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:indeterminate="true"
+        android:padding="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-4dp"
+        android:visibility="gone"/>
 </RelativeLayout>

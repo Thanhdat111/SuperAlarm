@@ -25,14 +25,14 @@ public class AlarmModel {
     }
 
     public AlarmModel(long id, int timeHour, int timeMinute,
-                      boolean[] repeatingDays, boolean repeatWeekly, Uri alarmTone,
+                      boolean[] repeatingDays, boolean repeatWeekly,// Uri alarmTone,
                       String name, boolean isEnabled) {
         this.id = id;
         this.timeHour = timeHour;
         this.timeMinute = timeMinute;
         this.repeatingDays = repeatingDays;
         this.repeatWeekly = repeatWeekly;
-        this.alarmTone = alarmTone;
+       // this.alarmTone = alarmTone;
         this.name = name;
         this.isEnabled = isEnabled;
     }

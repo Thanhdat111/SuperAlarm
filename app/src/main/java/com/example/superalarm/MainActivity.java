@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.superalarm.Database.alarmdatabase.AlarmDBHelper;
+import com.example.superalarm.Database.alarmdatabase.AlarmModel;
 import com.example.superalarm.Database.questiondatabase.DatabaseQuestion;
 import com.example.superalarm.Database.questiondatabase.Question;
 import com.example.superalarm.UI.Fragment.AlarmFragment;
@@ -49,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
         db = new DatabaseQuestion(this);
         alarmDBHelper = new AlarmDBHelper(this);
+        boolean arrayRepeat[]  = new boolean[7];
+      for(int i=0; i<arrayRepeat.length;i++){
+          arrayRepeat[i] = true;
+      }
+        AlarmModel alarmModel = new AlarmModel(12,10,30,arrayRepeat,true,"Bao thuc day som",true);
+
+      alarmDBHelper.createAlarm(alarmModel);
 
         Question question = new Question("cau hoi","traloi");
         db.addQuestion(question);
@@ -62,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //toolbar
         toolbar = (Toolbar)findViewById(R.id.toolbar_mainActivity);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Báo thức");
+//        getSupportActionBar().setTitle("Báo thức");
         toolbar.setTitleTextColor(Color.WHITE);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);

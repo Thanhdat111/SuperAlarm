@@ -24,7 +24,7 @@ public class AlarmDBHelper extends SQLiteOpenHelper {
             AlarmContract.Alarm.COLUMN_NAME_ALARM_TIME_MINUTE + " INTEGER," +
             AlarmContract.Alarm.COLUMN_NAME_ALARM_REPEAT_DAYS + " TEXT," +
             AlarmContract.Alarm.COLUMN_NAME_ALARM_REPEAT_WEEKLY + " BOOLEAN," +
-            AlarmContract.Alarm.COLUMN_NAME_ALARM_TONE + " TEXT," +
+          //  AlarmContract.Alarm.COLUMN_NAME_ALARM_TONE + " TEXT," +
             AlarmContract.Alarm.COLUMN_NAME_ALARM_ENABLED + " BOOLEAN" + " )";
 
     private static final String SQL_DELETE_ALARM =

@@ -1,6 +1,7 @@
 package com.example.superalarm;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,10 +13,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.superalarm.Database.alarmdatabase.AlarmDBHelper;
+import com.example.superalarm.Database.alarmdatabase.AlarmModel;
+import com.example.superalarm.Database.questiondatabase.DatabaseQuestion;
+import com.example.superalarm.Database.questiondatabase.Question;
 import com.example.superalarm.UI.Fragment.AlarmFragment;
 import com.example.superalarm.UI.Fragment.QuestionFragment;
 import com.example.superalarm.UI.Fragment.DiaryFragment;
@@ -24,22 +30,47 @@ import com.example.superalarm.UI.Login.PreLoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private FragmentManager fragment;
     private DrawerLayout dl;
     private NavigationView nav_view;
     private Toolbar toolbar;
+    private DatabaseQuestion db;
+    private AlarmDBHelper alarmDBHelper;
+    private ArrayList<Question> questionList;
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        db = new DatabaseQuestion(this);
+        alarmDBHelper = new AlarmDBHelper(this);
+        boolean arrayRepeat[]  = new boolean[7];
+      for(int i=0; i<arrayRepeat.length;i++){
+          arrayRepeat[i] = true;
+      }
+        AlarmModel alarmModel = new AlarmModel(12,10,30,arrayRepeat,true,"Bao thuc day som",true);
+
+      alarmDBHelper.createAlarm(alarmModel);
+
+        Question question = new Question("cau hoi","traloi");
+        db.addQuestion(question);
+        questionList = new ArrayList<Question>();
+        questionList = db.getAllQuestion();
+
+//        questionList.forEach(question1 -> Log.d("question",question1.getAnswer()));
+
+
 
         //toolbar
         toolbar = (Toolbar)findViewById(R.id.toolbar_mainActivity);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Báo thức");
+//        getSupportActionBar().setTitle("Báo thức");
         toolbar.setTitleTextColor(Color.WHITE);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);

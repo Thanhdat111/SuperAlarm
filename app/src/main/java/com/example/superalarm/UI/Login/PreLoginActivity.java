@@ -11,17 +11,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.superalarm.MainActivity;
 import com.example.superalarm.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class PreLoginActivity extends AppCompatActivity {
 
     private Button btn_loginByUser, btn_loginByFaceId;
     private TextView btn_guide;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pre_login);
 
+        auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() != null){
+            startActivity(new Intent(PreLoginActivity.this, MainActivity.class));
+            finish();
+        }
 
         btn_loginByUser = (Button)findViewById(R.id.btn_login_by_user);
         btn_loginByUser.setOnClickListener(new View.OnClickListener() {

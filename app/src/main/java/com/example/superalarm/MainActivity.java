@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -23,19 +22,21 @@ import com.example.superalarm.UI.Fragment.SettingFragment;
 import com.example.superalarm.UI.Login.PreLoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FragmentManager fragment;
+    private Fragment fragment;
     private DrawerLayout dl;
     private NavigationView nav_view;
     private Toolbar toolbar;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        auth = FirebaseAuth.getInstance();
         //toolbar
         toolbar = (Toolbar)findViewById(R.id.toolbar_mainActivity);
         setSupportActionBar(toolbar);
@@ -63,14 +64,14 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }else
                 if(id == R.id.logout_nav){
-
+                    auth.signOut();
                 }
                 return false;
             }
         });
 
         //default fragment
-        Fragment fragment = new AlarmFragment();
+        fragment = new AlarmFragment();
         loadFragment(fragment);
 
         BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);

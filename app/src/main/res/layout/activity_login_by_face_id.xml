@@ -14,13 +14,31 @@
         android:layout_margin="20dp"
         android:scaleType="fitCenter"
         android:src="@drawable/avatar"/>
-    <Button
-        android:id="@+id/btn_takePhoto"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:text="chụp ảnh của bạn"
-        android:textSize="18sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"/>
-
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/btn_takePhoto"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:text="chụp ảnh"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btn_detect_face"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:text="Detect face"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btn_identify_face"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:text="identify face"
+            android:textSize="18sp"/>
+    </LinearLayout>
 </LinearLayout>

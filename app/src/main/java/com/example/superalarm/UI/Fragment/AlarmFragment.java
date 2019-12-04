@@ -73,6 +73,7 @@ public class AlarmFragment extends Fragment {
                lb_time_alarmClock.setText(hours+":"+minutes+" ");
 
                Log.d("test", String.valueOf(calendar.getTimeInMillis()));
+               Log.d("ngay va gio:" , hours +":" + minutes);
 
                intent_alarm.putExtra("extra","on");
 

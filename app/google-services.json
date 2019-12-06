@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "199814728883",
+    "firebase_url": "https://super-alarm-6cff1.firebaseio.com",
+    "project_id": "super-alarm-6cff1",
+    "storage_bucket": "super-alarm-6cff1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199814728883:android:08ccc3df325654a0ebb4c6",
+        "android_client_info": {
+          "package_name": "com.example.superalarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199814728883-s9eehv2qemlmlm6fh3v3vkbumri6prj7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superalarm",
+            "certificate_hash": "501b4b70b3594498ca2c111954792d8238f4a47d"
+          }
+        },
+        {
+          "client_id": "199814728883-hk9d60dkn7cpcb7d22b9j2hc7du1h708.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVU0jVaaOfypY33mBcjMr6FxqtiFpH-Mg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199814728883-hk9d60dkn7cpcb7d22b9j2hc7du1h708.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

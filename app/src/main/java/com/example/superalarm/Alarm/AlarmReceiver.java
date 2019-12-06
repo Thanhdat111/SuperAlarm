@@ -3,11 +3,9 @@ package com.example.superalarm.Alarm;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-<<<<<<< HEAD
 import android.util.Log;
-=======
+
 import android.media.MediaPlayer;
->>>>>>> dat
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override

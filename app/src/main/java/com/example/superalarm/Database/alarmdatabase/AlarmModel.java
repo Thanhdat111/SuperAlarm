@@ -36,6 +36,17 @@ public class AlarmModel {
         this.name = name;
         this.isEnabled = isEnabled;
     }
+    public AlarmModel(int timeHour, int timeMinute,
+                      boolean[] repeatingDays, boolean repeatWeekly,// Uri alarmTone,
+                      String name, boolean isEnabled) {
+        this.timeHour = timeHour;
+        this.timeMinute = timeMinute;
+        this.repeatingDays = repeatingDays;
+        this.repeatWeekly = repeatWeekly;
+        // this.alarmTone = alarmTone;
+        this.name = name;
+        this.isEnabled = isEnabled;
+    }
 
 
 

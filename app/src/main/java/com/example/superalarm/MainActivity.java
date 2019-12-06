@@ -16,12 +16,14 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.superalarm.UI.Fragment.AlarmFragment;
+import com.example.superalarm.UI.Fragment.ListAlarmFragment;
 import com.example.superalarm.UI.Fragment.QuestionFragment;
 import com.example.superalarm.UI.Fragment.DiaryFragment;
 import com.example.superalarm.UI.Fragment.SettingFragment;
 import com.example.superalarm.UI.Login.PreLoginActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,13 +32,12 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout dl;
     private NavigationView nav_view;
     private Toolbar toolbar;
-    FirebaseAuth auth;
+     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        auth = FirebaseAuth.getInstance();
+     //   auth = FirebaseAuth.getInstance();
         //toolbar
         toolbar = (Toolbar)findViewById(R.id.toolbar_mainActivity);
         setSupportActionBar(toolbar);
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //default fragment
-        fragment = new AlarmFragment();
+        fragment = new ListAlarmFragment();
         loadFragment(fragment);
 
         BottomNavigationView navigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
@@ -110,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void loadFragment(Fragment fragment){
+    public void loadFragment(Fragment fragment){
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fragment_main,fragment);
         fragmentTransaction.addToBackStack(null);

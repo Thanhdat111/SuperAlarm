@@ -25,6 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đặt giờ"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_login"
         android:layout_toRightOf="@id/lb_timeAlarm"
         android:layout_marginTop="40dp"/>
 
@@ -105,6 +107,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hẹn giờ"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_login"
         android:layout_below="@id/checkBox_sunDay"
         android:layout_margin="20dp"/>
     <Button
@@ -112,6 +116,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dừng lại"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_login"
         android:layout_below="@id/checkBox_sunDay"
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"/>

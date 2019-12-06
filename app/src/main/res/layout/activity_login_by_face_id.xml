@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="5"
     tools:context=".UI.Login.LoginByFaceIdActivity">
 
     <ImageView
         android:id="@+id/img_photo_checkid"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="0dp"
         android:layout_margin="20dp"
         android:scaleType="fitCenter"
+        android:layout_weight="4.5"
         android:src="@drawable/avatar"/>
     <LinearLayout
-        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:weightSum="3">
         <Button
             android:id="@+id/btn_takePhoto"
@@ -25,20 +27,26 @@
             android:layout_weight="1"
             android:layout_height="60dp"
             android:text="chụp ảnh"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_login"/>
         <Button
             android:id="@+id/btn_detect_face"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="60dp"
             android:text="Detect face"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_login"/>
         <Button
             android:id="@+id/btn_identify_face"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="60dp"
             android:text="identify face"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_login"/>
     </LinearLayout>
 </LinearLayout>

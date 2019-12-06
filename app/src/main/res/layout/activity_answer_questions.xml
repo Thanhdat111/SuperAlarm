@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnswerQuestionsActivity">
+
+    <ImageView
+        android:id="@+id/imgBtn_cauTruoc_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cautruoc"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <ImageView
+        android:id="@+id/imgBtn_cauSau_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/causau"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/lb_cauSo_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Câu 1"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imgBtn_cauTruoc_answer"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/lb_cauhoi_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Câu hỏi"
+        android:textSize="26sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/lb_cauSo_answer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="10dp">
+        <RadioButton
+            android:id="@+id/cautraloi1_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu trả lời 1"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:id="@+id/cautraloi2_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu trả lời 1"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:id="@+id/cautraloi3_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu trả lời 1"
+            android:textSize="26sp"/>
+        <RadioButton
+            android:id="@+id/cautraloi4_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu trả lời 1"
+            android:textSize="26sp"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/btn_nopbai_answer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="nộp bài"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_login"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.example.superalarm.AnswerQuestionsActivity;
 import com.example.superalarm.R;
 
 public class Sound extends Service {
@@ -28,6 +29,7 @@ public class Sound extends Service {
             mediaPlayer = MediaPlayer.create(this, songid);
 
             mediaPlayer.start();
+
         }else
             if(key_receive.equals("off")){
                 mediaPlayer.stop();

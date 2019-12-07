@@ -7,6 +7,8 @@ import android.util.Log;
 
 import android.media.MediaPlayer;
 
+import com.example.superalarm.AnswerQuestionsActivity;
+
 public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -18,5 +20,9 @@ public class AlarmReceiver extends BroadcastReceiver {
         Intent myintent = new Intent(context,Sound.class);
         myintent.putExtra("extra",str);
         context.startService(myintent);
+
+        Intent newIntent = new Intent(context, AnswerQuestionsActivity.class);
+        newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(newIntent);
     }
 }

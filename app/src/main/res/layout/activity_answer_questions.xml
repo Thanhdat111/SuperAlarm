@@ -40,42 +40,94 @@
         android:textColor="@android:color/black"
         android:layout_below="@+id/lb_cauSo_answer"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="20dp" />
     <RadioGroup
+        android:id="@+id/radioButton_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
         android:padding="10dp">
         <RadioButton
+            android:layout_marginTop="80dp"
             android:id="@+id/cautraloi1_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Câu trả lời 1"
+            android:layout_marginBottom="20dp"
             android:textSize="26sp"/>
         <RadioButton
             android:id="@+id/cautraloi2_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:text="Câu trả lời 1"
             android:textSize="26sp"/>
         <RadioButton
+            android:checked="true"
             android:id="@+id/cautraloi3_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:text="Câu trả lời 1"
             android:textSize="26sp"/>
         <RadioButton
             android:id="@+id/cautraloi4_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
             android:text="Câu trả lời 1"
             android:textSize="26sp"/>
     </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:layout_alignBottom="@+id/radioButton_group">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txt_answers"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="Số câu trả lời đúng "
+            android:textSize="20sp">
+        </TextView>
+        <TextView
+            android:id="@+id/txt_correctAnswers"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/txt_answers"
+            android:textSize="20sp"
+            >
+        </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <Button
+        android:layout_below="@id/linearLayout"
+        android:id="@+id/checkAnswer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="nộp bài"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_login">
+
+    </Button>
+
+
+
+
     <Button
         android:id="@+id/btn_nopbai_answer"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="nộp bài"
+        android:text="Chuyen trang"
         android:textSize="16sp"
         android:textColor="@android:color/white"
         android:background="@drawable/button_login"

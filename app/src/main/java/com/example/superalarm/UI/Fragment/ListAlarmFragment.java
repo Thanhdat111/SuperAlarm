@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +33,7 @@ public class ListAlarmFragment extends Fragment {
     private FloatingActionButton btn_newAlarm ;
     private ListAlarmAdapter listAlarmRecyclerView;
     private RecyclerView recyclerView;
+    private  int REQ_CODE_SECOND_FRAGMENT =1234;
     List<AlarmModel> listAlarmModel;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,6 +41,10 @@ public class ListAlarmFragment extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list_alarm, container, false);
+
+      //  AlarmModel alarmModel = (AlarmModel) getArguments().getSerializable("alarm");
+
+      //  Log.d("du lieu rmFragment",alarmModel.getName());
 
         btn_newAlarm = view.findViewById(R.id.btn_fta_add_alarm);
         recyclerView = view.findViewById(R.id.listview_list_alarm);
@@ -48,8 +54,7 @@ public class ListAlarmFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment fragment = new AlarmFragment();
-                loadFragment(fragment);
-
+               loadFragment(fragment);
             }
         });
         alarmDBHelper = new AlarmDBHelper(this.getContext());
@@ -57,10 +62,9 @@ public class ListAlarmFragment extends Fragment {
         for(int i =0;i<arrayRepeated.length;i++){
             arrayRepeated[i] = true;
         }
+        Bundle args = new Bundle();
         alarmModel = new AlarmModel(10,30,arrayRepeated,false,"test bao thuc ",true);
-        AlarmModel alarmModel1 = new AlarmModel(11,20,arrayRepeated,false,"thanhdatbaothuc",true);
-        alarmDBHelper.createAlarm(alarmModel);
-        alarmDBHelper.createAlarm(alarmModel1);
+      //  alarmDBHelper.createAlarm(alarmModel);
         listAlarmModel = new ArrayList<AlarmModel>();
         listAlarmModel = alarmDBHelper.getAlarms();
         Log.d("fragemnt","listAlarmFragment");
@@ -72,6 +76,7 @@ public class ListAlarmFragment extends Fragment {
             layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
             recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(listAlarmRecyclerView);
+        listAlarmRecyclerView.notifyDataSetChanged();
 
         return view;
 

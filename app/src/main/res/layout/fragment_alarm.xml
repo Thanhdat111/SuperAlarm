@@ -102,6 +102,15 @@
         android:layout_below="@id/checkBox_stuDay"
         android:layout_marginLeft="60dp"
         android:layout_marginBottom="10dp"/>
+            <EditText
+                android:id="@+id/txt_name_alarm"
+                android:layout_below="@+id/checkBox_sunDay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:hint="Ten Bao thuc"
+                ></EditText>
     <Button
         android:id="@+id/btn_set_alarm_clock"
         android:layout_width="wrap_content"
@@ -109,7 +118,7 @@
         android:text="Hẹn giờ"
         android:textColor="@android:color/white"
         android:background="@drawable/button_login"
-        android:layout_below="@id/checkBox_sunDay"
+        android:layout_below="@id/txt_name_alarm"
         android:layout_margin="20dp"/>
     <Button
         android:id="@+id/btn_stop_alarm_clock"
@@ -118,7 +127,7 @@
         android:text="Dừng lại"
         android:textColor="@android:color/white"
         android:background="@drawable/button_login"
-        android:layout_below="@id/checkBox_sunDay"
+        android:layout_below="@id/txt_name_alarm"
         android:layout_alignParentRight="true"
         android:layout_margin="20dp"/>
         </RelativeLayout>

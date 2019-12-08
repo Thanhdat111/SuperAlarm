@@ -2,7 +2,9 @@ package com.example.superalarm.Database.alarmdatabase;
 
 import android.net.Uri;
 
-public class AlarmModel {
+import java.io.Serializable;
+
+public class AlarmModel implements Serializable {
     public static final int SUNDAY = 0;
     public static final int MONDAY = 1;
     public static final int TUESDAY = 2;

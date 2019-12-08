@@ -17,6 +17,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         String str = intent.getExtras().getString("extra");
         Log.e("chuoi string truyen",str);
 
+
         Intent myintent = new Intent(context,Sound.class);
         myintent.putExtra("extra",str);
         context.startService(myintent);
@@ -24,5 +25,7 @@ public class AlarmReceiver extends BroadcastReceiver {
         Intent newIntent = new Intent(context, AnswerQuestionsActivity.class);
         newIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(newIntent);
+
+
     }
 }

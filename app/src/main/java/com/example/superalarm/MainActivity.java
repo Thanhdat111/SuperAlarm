@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.alarm_navBottom:
                     Log.d("fragemt","alarm");
-                    fragment = new AlarmFragment();
+                    fragment = new ListAlarmFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.diary_navBottom:

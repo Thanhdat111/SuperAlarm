@@ -8,18 +8,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class DatabaseQuestion extends SQLiteOpenHelper{
+public class QuestionDBHelper extends SQLiteOpenHelper{
 
     private static final int DATABASE_VERSION =1;
-    private static final String DATABASE_NAME = "Question";
+    private static final String DATABASE_NAME = "QuestionModel";
     private static final String TABLE_NAME = "question_manager";
     private static final String ID = "id";
     private static final String QUESTION = "question";
     private static final String ANSWER = "answer";
     private Context context;
 
-    public DatabaseQuestion(Context context) {
+    public QuestionDBHelper(Context context) {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
         this.context = context;
     }
@@ -44,42 +45,27 @@ public class DatabaseQuestion extends SQLiteOpenHelper{
 
 
     }
-   /* public void deleteContact(int id){
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_NAME,ID + "=?", new String[]{String.valueOf(id)});
-        db.close();
-    }
-    public void updateContact(Q contact){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(NAME,contact.getName());
-        values.put(PHONE_NUMBER,contact.getPhone());
-        values.put(AVATAR,contact.getAvatar());
-        db.update(TABLE_NAME,values,ID+"=?",new String[]{String.valueOf(contact.getID())});
-        db.close();
-    }*/
-
-    public void addQuestion(Question question) {
+    public void addQuestion(QuestionModel questionModel) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(QUESTION,question.getQuestion());
-        values.put(ANSWER,question.getAnswer());
+        values.put(QUESTION, questionModel.getQuestion());
+        values.put(ANSWER, questionModel.getAnswer());
         db.insert(TABLE_NAME,null,values);
 
 
     }
-    public Question getQuestion(int id){
+    public QuestionModel getQuestion(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor =db.query(TABLE_NAME ,new String[]{ID,QUESTION,ANSWER},ID+"=?",new String[]{String.valueOf(id)},null,null,null);
         if(cursor!=null) {
             cursor.moveToFirst();
         }
-        Question question = new Question(Integer.parseInt(cursor.getString(0)),cursor.getString(1),cursor.getString(2));
-        return  question;
+        QuestionModel questionModel = new QuestionModel(Integer.parseInt(cursor.getString(0)),cursor.getString(1),cursor.getString(2));
+        return questionModel;
     }
-    public ArrayList<Question> getAllQuestion(){
-        ArrayList<Question> list = new ArrayList<Question>();
+    public List<QuestionModel> getAllQuestion(){
+        List<QuestionModel> list = new ArrayList<QuestionModel>();
         String sql = "SELECT * FROM " +TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(sql,null);
@@ -89,8 +75,8 @@ public class DatabaseQuestion extends SQLiteOpenHelper{
                 int id = Integer.parseInt(cursor.getString(0));
                 String question = cursor.getString(1);
                 String answer = cursor.getString(2);
-                Question question1 = new Question(id,question,answer);
-                list.add(question1);
+                QuestionModel questionModel1 = new QuestionModel(id,question,answer);
+                list.add(questionModel1);
             }while (cursor.moveToNext());
         }
         return list;

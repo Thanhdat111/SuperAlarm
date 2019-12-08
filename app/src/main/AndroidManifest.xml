@@ -13,18 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".AnswerQuestionsActivity"></activity>
+        <activity android:name=".AnswerQuestionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".UI.Login.ResetPasswordActivity" />
         <activity android:name=".UI.Login.RegisterActivity" />
         <activity android:name=".UI.Login.LoginByFaceIdActivity" />
         <activity android:name=".UI.Login.PreLoginActivity" />
         <activity android:name=".UI.Login.LoginByUserActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <receiver android:name=".Alarm.AlarmReceiver" />

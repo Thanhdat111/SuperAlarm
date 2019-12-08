@@ -1,17 +1,17 @@
 package com.example.superalarm.Database.questiondatabase;
 
-public class Question {
+public class QuestionModel {
     int id;
     String question;
     String answer;
 
-    public Question(int id, String question, String answer) {
+    public QuestionModel(int id, String question, String answer) {
         this.answer = answer;
         this.id = id;
         this.question = question;
     }
 
-    public Question(String question,String answer){
+    public QuestionModel(String question, String answer){
         this.question = question;
         this.answer  = answer;
     }
